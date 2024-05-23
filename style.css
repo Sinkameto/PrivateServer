@@ -1,0 +1,100 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Varela+Round&display=swap'); 
+body {
+font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.fullbleed {
+    display: grid;
+    grid-template-columns: minmax(16px, 1fr) minmax(auto, 1120px) minmax(16px, 1fr);
+    > * {
+        grid-column: 1 / -1;
+    }
+}
+.section-01 {
+    
+    background: rgb(236, 162, 119);
+    display: grid;
+    grid-template-areas: 
+        "heading"
+        "text"
+        "button"
+        "."
+        "photo";
+    grid-template-rows: 
+        repeat(4, auto) 480px;
+    row-gap: 24px;
+    justify-items: center;
+    text-align: center;
+    > .heading {
+        grid-area: heading;
+        animation: slideIn 0.4s forwards;
+    }
+    > .text {
+        grid-area: text;
+        animation: slideIn 0.8s forwards;
+    }
+    > .button {
+        grid-area: button;
+        border: none;
+        background: rgb(255, 174, 61);
+        width: 14em;
+        height: 3.5em;
+        border-radius: 5px;
+        animation: slideIn 1.2s forwards;
+    }
+    > .photo {
+        grid-area: photo;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        animation: slideIn 1.6s forwards;
+    }
+}
+.section-02 {
+    animation: slideIn 2s forwards;
+    display: grid;
+    grid-template-areas:
+        ". ."
+        "photo heading"
+        "photo text"
+        "photo button"
+        "photo .";
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    row-gap: 24px;
+    justify-items: center;
+    text-align: center;
+    > .heading {
+        grid-area: heading;
+        animation: slideIn 0.4s forwards;
+    }
+    > .text {
+        grid-area: text;
+        animation: slideIn 0.8s forwards;
+    }
+    > .button {
+        grid-area: button;
+        border: none;
+        background: rgb(255, 174, 61);
+        width: 14em;
+        height: 3.5em;
+        border-radius: 5px;
+        animation: slideIn 1.2s forwards;
+    }
+    > .photo {
+        grid-area: photo;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        animation: slideIn 1.6s forwards;
+    }
+}
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
