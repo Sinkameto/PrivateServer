@@ -88,6 +88,44 @@ font-family: 'M PLUS Rounded 1c', sans-serif;
         animation: slideIn 1.6s forwards;
     }
 }
+.section-03 {
+    animation: slideIn 2s forwards;
+    display: grid;
+    grid-template-areas:
+        ". ."
+        "heading photo"
+        "text photo"
+        "button photo"
+        ". photo";
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    row-gap: 24px;
+    justify-items: center;
+    text-align: center;
+    > .heading {
+        grid-area: heading;
+        animation: slideIn 0.4s forwards;
+    }
+    > .text {
+        grid-area: text;
+        animation: slideIn 0.8s forwards;
+    }
+    > .button {
+        grid-area: button;
+        border: none;
+        background: rgb(255, 174, 61);
+        width: 14em;
+        height: 3.5em;
+        border-radius: 5px;
+        animation: slideIn 1.2s forwards;
+    }
+    > .photo {
+        grid-area: photo;
+        border-radius: 10px;
+        filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+        animation: slideIn 1.6s forwards;
+    }
+}
 @keyframes slideIn {
     0% {
       opacity: 0;
